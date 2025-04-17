@@ -16,7 +16,7 @@
     <div class="container">
       <!-- Content-->
       <div class="Content">
-          
+          <h1>Login</h1>
       </div>
 
       <!-- Login Form -->
@@ -56,15 +56,18 @@
         const registerDiv = document.getElementById("register");
         const Kontainer = document.querySelector(".container");
         const Konten = document.querySelector(".Content");
-       
+        const Judul = document.querySelector(".Content h1");
+        console.log(Judul);
 
         if (form === "register") {
           loginForm.classList.add("hidden");
           registerDiv.classList.remove("hidden");
+          Judul.innerHTML = "Registrasi";
 
         } else {
           loginForm.classList.remove("hidden");
           registerDiv.classList.add("hidden");
+          Judul.innerHTML = "Login";
         }
       }
 

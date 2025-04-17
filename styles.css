@@ -28,6 +28,11 @@
   font-family: "Poku";
 }
 
+input {
+  height: 40px; /* contoh */
+  padding: 0 1rem; /* padding atas-bawah bisa diatur lebih kecil */
+}
+
 body {
   background-color: var(--Accent-Color);
   width: 100vw;
@@ -66,11 +71,21 @@ body {
   background-color: var(--Secondary-Color);
 }
 
+
 .Content {
   height: 50%;
   width: 100%;
   border-radius: 0 0px 70px 70px;
   background-color: var(--Accent-Color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Content h1 {
+  font-family: "Poku";
+  color: var(--Secondary-Color);
+  font-size: 3rem;
 }
 
 /* Card */
@@ -95,6 +110,8 @@ h1 {
   text-align: center;
   font-weight: 600;
 }
+
+
 
 /* Form */
 form {
@@ -138,6 +155,11 @@ button {
   cursor: pointer;
   transition: background-color 0.3s;
   margin-top: 0.5rem;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 button:hover {
