@@ -20,21 +20,6 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-  background-color: #f5f7fa;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  color: #333;
-}
-
-.container {
-  width: 100%;
-  max-width: 420px;
-  padding: 2rem;
-}
-
 /* Card  */
 #loginForm, #register {
   background: white;
@@ -72,6 +57,8 @@ body {
 
 .container {
   display: flex;
+  flex-direction: column;
+
   width: 750px;
   height: 500px;
   overflow: hidden;
@@ -82,7 +69,7 @@ body {
 .Content {
   height: 100%;
   width: 50%;
-  border-radius: 0 70px 70px 0;
+  border-radius: 0 0px 70px 70px;
   background-color: var(--Primary-Color);
 }
 
