@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 @font-face {
   font-family: "Poku";
   src: url(./Font/PoetsenOne-Regular.ttf);
@@ -13,13 +12,11 @@
   --Neutral-Gray: #CCCCCC;       /* Opsional: border/input placeholder */
 }
 
->>>>>>> 6aad5bd (Update)
 /* Global Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-<<<<<<< HEAD
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -43,7 +40,6 @@ body {
   background: white;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-=======
   font-family: "Poku";
 }
 
@@ -95,7 +91,6 @@ body {
   width: 50%;
   height: 100%;
   background-color: var(--Secondary-Color);
->>>>>>> 6aad5bd (Update)
   padding: 2.5rem;
   transition: all 0.3s ease;
 }
@@ -108,20 +103,13 @@ body {
 h1 {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
-<<<<<<< HEAD
   color: #2c3e50;
-=======
   color: var(--Primary-Color);
->>>>>>> 6aad5bd (Update)
   text-align: center;
   font-weight: 600;
 }
 
-<<<<<<< HEAD
-/* Form  */
-=======
 /* Form */
->>>>>>> 6aad5bd (Update)
 form {
   display: flex;
   flex-direction: column;
@@ -136,11 +124,8 @@ label {
 
 input {
   padding: 0.8rem 1rem;
-<<<<<<< HEAD
   border: 1px solid #ddd;
-=======
   border: 1px solid var(--Neutral-Gray);
->>>>>>> 6aad5bd (Update)
   border-radius: 8px;
   font-size: 0.95rem;
   transition: border 0.3s;
@@ -154,13 +139,10 @@ input:focus {
 
 /* Button */
 button {
-<<<<<<< HEAD
   background-color: #4a90e2;
   color: white;
-=======
   background-color: var(--Success-Color);
   color: var(--Primary-Color);
->>>>>>> 6aad5bd (Update)
   border: none;
   padding: 0.8rem;
   border-radius: 8px;
@@ -172,11 +154,8 @@ button {
 }
 
 button:hover {
-<<<<<<< HEAD
   background-color: #3a7bc8;
-=======
   background-color: #b6f351; /* Sedikit lebih gelap dari --Success-Color */
->>>>>>> 6aad5bd (Update)
 }
 
 /* Link */
@@ -188,11 +167,8 @@ p {
 }
 
 a {
-<<<<<<< HEAD
   color: #4a90e2;
-=======
   color: var(--Accent-Color);
->>>>>>> 6aad5bd (Update)
   text-decoration: none;
   font-weight: 500;
 }
@@ -208,8 +184,6 @@ a:hover {
   text-align: center;
   margin-top: 1rem;
   min-height: 1.2rem;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 6aad5bd (Update)
+
+
