@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+<<<<<<< HEAD
 
 <head>
     <meta charset="UTF-8">
@@ -40,10 +41,58 @@
         </div>
     </div>
     
+=======
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Login dan Registrasi</title>
+  </head>
+
+  <body>
+
+    <div class="video-bg">
+        <video id="video" src="./Asset/login.mp4" autoplay muted loop></video>
+      </div>
+
+    <div class="container">
+      <!-- Content-->
+      <div class="Content"></div>
+
+      <!-- Login Form -->
+      <div id="loginForm">
+        <h1>Login</h1>
+        <form onsubmit="return handleLogin(event)">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+          <button type="submit" id="button-login">Login</button>
+          <div class="response"></div>
+        </form>
+        <p>Belum punya akun? <a href="#" onclick="toggleForms('register')">Registrasi di sini</a></p>
+      </div>
+
+      <!-- Register Form -->
+      <div id="register" class="hidden">
+        <form onsubmit="return handleRegister(event)">
+          <label for="regFullname">Fullname:</label>
+          <input type="text" id="regFullname" name="regFullname" required />
+          <label for="regEmail">Email:</label>
+          <input type="email" id="regEmail" name="regEmail" required />
+          <label for="regPassword">Password:</label>
+          <input type="password" id="regPassword" name="regPassword" required />
+          <button type="submit" id="btn-regis">Registrasi</button>
+        </form>
+        <p>Sudah punya akun? <a href="#" onclick="toggleForms('login')">Login di sini</a></p>
+      </div>
+    </div>
+>>>>>>> 6aad5bd (Update)
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <script>
+<<<<<<< HEAD
         function toggleForms(form) {
             const loginForm = document.getElementById('loginForm');
             const registerDiv = document.getElementById('register');
@@ -134,4 +183,101 @@
     </script>
 </body>
 
+=======
+      function toggleForms(form) {
+        const loginForm = document.getElementById("loginForm");
+        const registerDiv = document.getElementById("register");
+        const Kontainer = document.querySelector(".container");
+        const Konten = document.querySelector(".Content");
+        const video = document.getElementById("video")
+       
+
+        if (form === "register") {
+          loginForm.classList.add("hidden");
+          registerDiv.classList.remove("hidden");
+          video.src = "./Asset/register.mp4"
+        } else {
+          loginForm.classList.remove("hidden");
+          registerDiv.classList.add("hidden");
+           video.src = "./Asset/login.mp4"
+        }
+      }
+
+      function handleLogin(event) {
+        event.preventDefault();
+
+        var email = $("#email").val();
+        var password = $("#password").val();
+
+        if (!email || !password) {
+          return alert("Kolom email dan password harus diisi!");
+        }
+
+        $.ajax({
+          url: "https://api-todo-list-pbw.vercel.app/auth/login",
+          type: "POST",
+          dataType: "json",
+          data: {
+            email: email,
+            password: password,
+          },
+          beforeSend: function () {
+            $("#button-login").text("Mohon tunggu...");
+          },
+          success: function (response) {
+            $("#button-login").text("Login");
+
+            if (response.status) {
+              localStorage.setItem("token", response.data.token);
+              localStorage.setItem("email", response.data.email);
+
+              window.location.href = "todo.html";
+            } else {
+              alert("Login gagal: " + response.message);
+            }
+          },
+          error: function (xhr, status, error) {
+            $("#button-login").text("Login");
+            $(".response").html("Error: " + xhr.status + " - " + error);
+          },
+        });
+      }
+
+      function handleRegister(event) {
+        event.preventDefault();
+
+        var fullname = $("#regFullname").val();
+        var email = $("#regEmail").val();
+        var password = $("#regPassword").val();
+        if (!fullname || !email || !password) {
+          return alert("Kolom fullname, email, dan password harus diisi!");
+        }
+
+        $.ajax({
+          url: "https://api-todo-list-pbw.vercel.app/auth/register",
+          type: "POST",
+          dataType: "json",
+          contentType: "application/json",
+          data: JSON.stringify({
+            email: email,
+            fullName: fullname,
+            password: password,
+          }),
+          beforeSend: function () {
+            $("#btn-regis").text("Mohon tunggu...");
+          },
+          success: function (response) {
+            $("#btn-regis").text("Registrasi");
+            alert("Registrasi berhasil! Silakan login.");
+            toggleForms("login");
+          },
+          error: function (xhr, status, error) {
+            $("#btn-regis").text("Registrasi");
+            alert("Registrasi gagal: " + xhr.responseText);
+          },
+        });
+      }
+    </script>
+  </body>
+>>>>>>> 6aad5bd (Update)
 </html>

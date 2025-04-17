@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="LandingPage.css" />
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  </head>
+
+  <body>
+    <nav>
+      <h1>List.io</h1>
+      <a href="./index.html"> Sign In</a>
+    </nav>
+
+    <section>
+      <h1 class="headline">
+        Do your tasks quickly<br />
+        and easy
+      </h1>
+      <h1>Your tasks, your rules, our support.</h1>
+      <a href="./index.html">Get Started</a>
+
+      <div class="icon">
+        <img src="./Asset/1.png" alt="" />
+        <img src="./Asset/2.png" alt="" />
+        <img src="./Asset/3.png" alt="" />
+        <img src="./Asset/4.png" alt="" />
+        <img src="./Asset/5.png" alt="" />
+      </div>
+    </section>
+
+    <script>
+      const images = document.querySelectorAll('.icon img');
+    
+      function randomizeAnimations() {
+        images.forEach((img) => {
+          img.style.animation = 'none';
+          img.offsetHeight; // Trigger reflow
+    
+          const delay = Math.random() * 2;
+          const duration = 4 + Math.random(); // tetap random tapi smooth
+    
+          img.style.animation = `popLoop ${duration}s ease-in-out ${delay}s infinite`;
+        });
+      }
+    
+      randomizeAnimations();
+    </script>
+    
+    
+    
+  </body>
+</html>

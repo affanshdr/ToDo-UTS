@@ -1,0 +1,143 @@
+@font-face {
+    font-family: "Poku";
+    src: url(./Font/PoetsenOne-Regular.ttf);
+}
+
+:root {
+    --Primary-Color : #141414;
+    --Secondary-Color : #FDF9F0;
+    --Third-Color : #FE601D;
+    --Four-Color : #C7FF69;
+}
+
+/* Global Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poku";
+  color: var(--Secondary-Color);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--Primary-Color);
+  overflow: hidden;
+}
+
+nav {
+  display: flex;
+  top: 0;
+  position: sticky;
+  justify-content: space-evenly;
+  padding: 0px 50px;
+  align-items: center;
+  height: 10vh;
+  width: 100vw;
+  color: rgb(8, 8, 8);
+
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+nav a {
+  text-decoration: none;
+  background-color: var(--Secondary-Color);
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+nav h1 {
+  color: var(--Third-Color);
+}
+
+nav a {
+  color: var(--Four-Color);
+  border: solid 3px var(--Four-Color);
+  background-color: var(--Primary-Color);
+  font-size: 2rem;
+  padding: 10px;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: var(--Four-Color);
+  color: var(--Primary-Color);
+}
+
+section {
+  display: flex;
+  align-items: center; /* Vertikal */
+  justify-content: space-between; /* Horizontal */
+  flex-direction: column;
+  height: 90vh;
+  padding: 20px;
+}
+
+section h1:nth-child(1) {
+  font-size: 5.5rem;
+}
+
+section h1:nth-child(2) {
+  font-size: 2rem;
+}
+
+section a {
+  color: var(--Primary-Color);
+  background-color: var(--Four-Color);
+  text-decoration: none;
+  font-size: 1rem;
+  width: 350px;
+  text-align: center;
+  border-radius: 40px;
+  padding: 5px;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+section a:hover {
+  background-color: var(--Third-Color);
+}
+
+.headline {
+  font-size: 7rem;
+  text-align: center;
+  line-height: 120px;
+}
+
+.icon {
+  width: 100vw;
+  height: 300px;
+  position: relative;
+}
+
+.icon img {
+  position: absolute;
+  width: 17%;
+  top: 50%;
+  transform: translateY(-50%) scale(0);
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Tempatkan gambar secara sejajar secara manual */
+.icon img:nth-child(1) { left: 2%; }
+.icon img:nth-child(2) { left: 21%; }
+.icon img:nth-child(3) { left: 40%; }
+.icon img:nth-child(4) { left: 59%; }
+.icon img:nth-child(5) { left: 78%; }
+
+@keyframes popLoop {
+  0%, 100% {
+    transform: translateY(-50%) scale(0);
+    opacity: 0;
+  }
+  20%, 60% {
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
+  }
+}
