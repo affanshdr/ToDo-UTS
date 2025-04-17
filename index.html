@@ -16,7 +16,7 @@
     <div class="container">
       <!-- Content-->
       <div class="Content">
-
+          
       </div>
 
       <!-- Login Form -->
@@ -42,8 +42,9 @@
           <label for="regPassword">Password:</label>
           <input type="password" id="regPassword" name="regPassword" required />
           <button type="submit" id="btn-regis">Registrasi</button>
+          <p>Sudah punya akun? <a href="#" onclick="toggleForms('login')">Login di sini</a></p>
         </form>
-        <p>Sudah punya akun? <a href="#" onclick="toggleForms('login')">Login di sini</a></p>
+        
       </div>
     </div>
 
@@ -55,17 +56,15 @@
         const registerDiv = document.getElementById("register");
         const Kontainer = document.querySelector(".container");
         const Konten = document.querySelector(".Content");
-        const video = document.getElementById("video")
        
 
         if (form === "register") {
           loginForm.classList.add("hidden");
           registerDiv.classList.remove("hidden");
-          video.src = "./Asset/register.mp4"
+
         } else {
           loginForm.classList.remove("hidden");
           registerDiv.classList.add("hidden");
-           video.src = "./Asset/login.mp4"
         }
       }
 
