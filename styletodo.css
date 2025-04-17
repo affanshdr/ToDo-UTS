@@ -1,3 +1,16 @@
+@font-face {
+    font-family: "Poku";
+    src: url(./Font/PoetsenOne-Regular.ttf);
+  }
+  
+  :root {
+    --Primary-Color: #141414;      /* Teks utama, latar gelap */
+    --Secondary-Color: #FDF9F0;    /* Latar utama, form, input */
+    --Accent-Color: #FE601D;       /* Aksen interaktif, link */
+    --Success-Color: #C7FF69;      /* Aksi positif (tombol) */
+    --Neutral-Gray: #CCCCCC;       /* Opsional: border/input placeholder */
+  }
+
 /* Global Styles */
 * {
     margin: 0;
@@ -8,7 +21,6 @@
 
 body {
     background-color: #f5f7fa;
-<<<<<<< HEAD
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -35,7 +47,7 @@ h1 {
     font-weight: 600;
 }
 
-=======
+body {
     min-height: 100vh;
     height: 100vh;
     overflow: hidden;
@@ -87,8 +99,6 @@ nav button {
     
     border: solid 3px #4a90e2;
 }
-
->>>>>>> 6aad5bd (Update)
 /* Input */
 .input-section {
     display: flex;
@@ -126,11 +136,9 @@ nav button {
     background-color: #3a7bc8;
 }
 
-<<<<<<< HEAD
+
 /* Todo Listt */
-=======
-/* Todo List */
->>>>>>> 6aad5bd (Update)
+
 #todo-list {
     list-style: none;
     margin-bottom: 2rem;
@@ -169,10 +177,6 @@ nav button {
     gap: 0.5rem;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 6aad5bd (Update)
 /* Button */
 .edit-btn {
     background-color: #f39c12;
