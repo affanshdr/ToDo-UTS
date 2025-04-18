@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Do List</title>
-    <link rel="stylesheet" href="styletodo.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="styletodo.css" />
+  </head>
+  <body>
     <video src="./Asset/todo v2.mp4" autoplay muted loop class="video-bg"></video>
 
     <nav>
-        <h1>List.io</h1>
-        <button onclick="logout()">Log Out</button>
+      <h1>List.io</h1>
+      <button onclick="logout()">Log Out</button>
     </nav>
 
-        <div class="Create">
-            <h1>Create Your To-Do</h1>
-            <div class="input-section">
-    
-                <input type="text" id="todo-input" placeholder="Write your todo...">
-                <button onclick="addTodo()">Tambah</button>
-            </div>
-        </div>
-        
+    <div class="main">
 
-        <ul id="todo-list"></ul>
+      <div class="Create">
+        <h1>Create Your To-Do</h1>
+        <div class="input-section">
+          <input type="text" id="todo-input" placeholder="Write your todo..." />
+          <button onclick="addTodo()">Tambah</button>
+        </div>
+      </div>
+
+      <div class="list-todo">
+        <div id="todo-list" class="todo-grid"></div>
         <div class="response"></div>
-    
-    
+      </div>
+
+
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="script.js"></script>
-
-
-</body>
+  </body>
 </html>
