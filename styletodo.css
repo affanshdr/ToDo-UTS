@@ -16,89 +16,59 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poku';
 }
 
 body {
-    background-color: #f5f7fa;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    color: #333;
-    padding-top: 3rem;
-}
-
-.container {
-    width: 100%;
-    max-width: 600px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    padding: 2.5rem;
-}
-
-/* Header */
-h1 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #2c3e50;
-    text-align: center;
-    font-weight: 600;
-}
-
-body {
-    min-height: 100vh;
+    background-color: var(--Accent-Color);
     height: 100vh;
-    overflow: hidden;
+    width: 100vw;
     color: #333;
+    position: relative;
 }
+
+.video-bg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 500px;
+    z-index: -1;
+}
+
 
 nav {
-    display: flex;
     top: 0;
     position: sticky;
-    justify-content: space-between;
     padding: 0px 50px;
-    align-items: center;
     height: 80px;
     width: 100vw;
-    background-color: #3a7bc8;
+    background-color: var(--Primary-Color);
+    height: 80px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     color: white;
-
     font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #ffffff;
-    font-weight: 600;
 }
 
 nav button {
-    background-color: #4a90e2;
     color: white;
-    border: none;
-    border-radius: 8px;
+    border: 3px solid var(--Success-Color);
+    border-radius: 20px;
     padding: 0.5rem 1rem;
     font-size: 0.95rem;
     cursor: pointer;
+    background-color: var(--Primary-Color);
+    transition: all 0.3s ease;
 }
 
-.main {
-    width: 30%;
-    margin-left: 100px;
+nav button:hover {
+    background-color: var(--Success-Color);
+    color: var(--Primary-Color);
 }
 
-.main h1 {
-    color: #333;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
 
-.Container {
-    width: 80vw;
-    height: 80vh;
-    
-    border: solid 3px #4a90e2;
-}
 /* Input */
 .input-section {
     display: flex;
@@ -208,23 +178,6 @@ nav button {
     background-color: #c0392b;
 }
 
-/* Logout */
-.container > button:last-child {
-    display: block;
-    width: 100%;
-    background-color: #95a5a6;
-    margin-top: 1.5rem;
-    padding: 0.8rem;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.container > button:last-child:hover {
-    background-color: #7f8c8d;
-}
 
 /* Pesan */
 .response {

@@ -1,86 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Segitiga CSS</title>
+  <meta charset="UTF-8">
+  <title>Music Player</title>
   <style>
     body {
       font-family: sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      gap: 40px;
-      padding: 50px;
-    }
-
-    .triangle-up {
-      width: 0;
-      height: 0;
-      border-left: 50px solid transparent;
-      border-right: 50px solid transparent;
-      border-bottom: 100px solid crimson;
-    }
-
-    .triangle-down {
-      width: 0;
-      height: 0;
-      border-left: 50px solid transparent;
-      border-right: 50px solid transparent;
-      border-top: 100px solid royalblue;
-    }
-
-    .triangle-left {
-      width: 0;
-      height: 0;
-      border-top: 50px solid transparent;
-      border-bottom: 50px solid transparent;
-      border-right: 100px solid green;
-    }
-
-    .triangle-right {
-      width: 0;
-      height: 0;
-      border-top: 50px solid transparent;
-      border-bottom: 50px solid transparent;
-      border-left: 100px solid orange;
-    }
-
-    .label {
-      margin-top: 10px;
-      font-weight: bold;
       text-align: center;
+      padding: 30px;
+      background-color: #111;
+      color: #fff;
     }
-
-    .triangle-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    #player {
+      margin-bottom: 20px;
+    }
+    button {
+      margin: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: none;
+      background: #1db954;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #1ed760;
     }
   </style>
 </head>
 <body>
 
-  <div class="triangle-wrapper">
-    <div class="triangle-up"></div>
-    <div class="label">Segitiga Atas</div>
+  <h1>🎶 My YouTube Music Player</h1>
+  <div id="player"></div>
+
+  <div>
+    <button onclick="playVideo()">Play</button>
+    <button onclick="pauseVideo()">Pause</button>
+    <button onclick="nextVideo()">Next</button>
   </div>
 
-  <div class="triangle-wrapper">
-    <div class="triangle-down"></div>
-    <div class="label">Segitiga Bawah</div>
-  </div>
+  <script>
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.body.appendChild(tag);
 
-  <div class="triangle-wrapper">
-    <div class="triangle-left"></div>
-    <div class="label">Segitiga Kiri</div>
-  </div>
+    var player;
+    var playlist = ["nNVgZaip2Qk", "tGv7CUutzqU"]; // Ganti dengan ID lagu favoritmu
+    var currentIndex = 0;
 
-  <div class="triangle-wrapper">
-    <div class="triangle-right"></div>
-    <div class="label">Segitiga Kanan</div>
-  </div>
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '360',
+        width: '640',
+        videoId: playlist[currentIndex],
+        events: {
+          'onReady': onPlayerReady
+        }
+      });
+    }
+
+    function onPlayerReady(event) {
+      event.target.playVideo();
+    }
+
+    function playVideo() {
+      player.playVideo();
+    }
+
+    function pauseVideo() {
+      player.pauseVideo();
+    }
+
+    function nextVideo() {
+      currentIndex = (currentIndex + 1) % playlist.length;
+      player.loadVideoById(playlist[currentIndex]);
+    }
+  </script>
 
 </body>
 </html>
