@@ -58,7 +58,7 @@ nav a {
   color: var(--Four-Color);
   border: solid 3px var(--Four-Color);
   background-color: var(--Primary-Color);
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 10px;
   border-radius: 40px;
   transition: all 0.3s ease;
@@ -72,10 +72,11 @@ nav a:hover {
 section {
   display: flex;
   align-items: center; /* Vertikal */
-  justify-content: space-between; /* Horizontal */
+  justify-content: space-around; /* Horizontal */
   flex-direction: column;
   height: 90vh;
   padding: 20px;
+  
 }
 
 section h1:nth-child(1) {
@@ -97,6 +98,7 @@ section a {
   padding: 5px;
   transition: all 0.3s ease;
   margin-top: 20px;
+
 }
 
 section a:hover {
@@ -104,14 +106,15 @@ section a:hover {
 }
 
 .headline {
+  margin-top: 10px;
   font-size: 7rem;
   text-align: center;
-  line-height: 120px;
+  line-height: 80px;
 }
 
 .icon {
   width: 100vw;
-  height: 300px;
+  height: 250px;
   position: relative;
 }
 
