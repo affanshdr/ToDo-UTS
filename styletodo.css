@@ -1,232 +1,154 @@
-/* Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
 body {
-    background-color: #f5f7fa;
-<<<<<<< HEAD
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    color: #333;
-    padding-top: 3rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #9379f8;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .container {
-    width: 100%;
-    max-width: 600px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    padding: 2.5rem;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  width: 600px; /* diperlebar dari 400px */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Header */
-h1 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #2c3e50;
-    text-align: center;
-    font-weight: 600;
+.title {
+  text-align: center;
+  color: #f97316;
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  font-weight: bold;
 }
 
-=======
-    min-height: 100vh;
-    height: 100vh;
-    overflow: hidden;
-    color: #333;
+.input-section-row {
+  display: flex;
+  margin-bottom: 25px;
 }
 
-nav {
-    display: flex;
-    top: 0;
-    position: sticky;
-    justify-content: space-between;
-    padding: 0px 50px;
-    align-items: center;
-    height: 80px;
-    width: 100vw;
-    background-color: #3a7bc8;
-    color: white;
-
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #ffffff;
-    font-weight: 600;
+.input-section-row input[type="text"] {
+  flex-grow: 1;
+  padding: 12px 15px;
+  border-radius: 10px 0 0 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 1rem;
 }
 
-nav button {
-    background-color: #4a90e2;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 0.5rem 1rem;
-    font-size: 0.95rem;
-    cursor: pointer;
+.input-section-row button {
+  background-color: #ccff33;
+  color: #000;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
-.main {
-    width: 30%;
-    margin-left: 100px;
+.input-section-row button:hover {
+  background-color: #b6f716;
 }
 
-.main h1 {
-    color: #333;
-    margin-bottom: 10px;
-    margin-top: 10px;
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-.Container {
-    width: 80vw;
-    height: 80vh;
-    
-    border: solid 3px #4a90e2;
+.todo-item {
+  background-color: #fff6ef;
+  border: 1px solid #f3d2b5;
+  border-radius: 12px;
+  padding: 1.1rem 1.2rem;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(255, 123, 0, 0.1);
+  transition: transform 0.2s ease;
 }
 
->>>>>>> 6aad5bd (Update)
-/* Input */
-.input-section {
-    display: flex;
-    gap: 0.8rem;
-    margin-bottom: 1.5rem;
+.todo-item:hover {
+  transform: scale(1.02);
 }
 
-#todo-input {
-    flex: 1;
-    padding: 0.8rem 1rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 0.95rem;
+.todo-item span {
+  flex-grow: 1;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.05rem;
 }
 
-#todo-input:focus {
-    outline: none;
-    border-color: #4a90e2;
-    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+.todo-item input[type="text"] {
+  padding: 6px 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
 }
 
-.input-section button {
-    background-color: #4a90e2;
-    color: white;
-    border: none;
-    padding: 0 1.5rem;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.3s;
+.todo-item div {
+  display: flex;
+  gap: 0.5rem;
 }
 
-.input-section button:hover {
-    background-color: #3a7bc8;
+.todo-item button {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
-<<<<<<< HEAD
-/* Todo Listt */
-=======
-/* Todo List */
->>>>>>> 6aad5bd (Update)
-#todo-list {
-    list-style: none;
-    margin-bottom: 2rem;
-}
-
-#todo-list li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.8rem 1rem;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    margin-bottom: 0.8rem;
-    transition: all 0.3s;
-}
-
-#todo-list li:hover {
-    background-color: #f0f0f0;
-}
-
-#todo-list li span {
-    flex: 1;
-    margin-right: 1rem;
-}
-
-#todo-list li input[type="text"] {
-    flex: 1;
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-right: 1rem;
-}
-
-#todo-list li div {
-    display: flex;
-    gap: 0.5rem;
-}
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 6aad5bd (Update)
-/* Button */
 .edit-btn {
-    background-color: #f39c12;
-    color: white;
-    border: none;
-    padding: 0.4rem 0.8rem;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  background-color: #fcd34d;
+  color: #000;
 }
 
 .edit-btn:hover {
-    background-color: #e67e22;
+  background-color: #fbbf24;
 }
 
 .delete-btn {
-    background-color: #e74c3c;
-    color: white;
-    border: none;
-    padding: 0.4rem 0.8rem;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  background-color: #ef4444;
+  color: #fff;
 }
 
 .delete-btn:hover {
-    background-color: #c0392b;
+  background-color: #dc2626;
 }
 
-/* Logout */
-.container > button:last-child {
-    display: block;
-    width: 100%;
-    background-color: #95a5a6;
-    margin-top: 1.5rem;
-    padding: 0.8rem;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.3s;
+.logout-wrapper {
+  margin-top: 25px;
+  text-align: center;
 }
 
-.container > button:last-child:hover {
-    background-color: #7f8c8d;
+.logout-btn {
+  background-color: #f97316;
+  color: white;
+  padding: 12px 40px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 1rem;
 }
 
-/* Pesan */
+.logout-btn:hover {
+  background-color: #ea580c;
+}
+
 .response {
-    color: #e74c3c;
-    font-size: 0.9rem;
-    text-align: center;
-    margin: 1rem 0;
-    min-height: 1.2rem;
+  color: red;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 10px;
 }
