@@ -98,11 +98,13 @@ section a {
   padding: 5px;
   transition: all 0.3s ease;
   margin-top: 20px;
-
+  border: 3px solid var(--Primary-Color);
 }
 
 section a:hover {
-  background-color: var(--Third-Color);
+  background-color: var(--Primary-Color);
+  border: 3px solid var(--Four-Color);
+  color: var(--Four-Color);
 }
 
 .headline {

@@ -51,6 +51,7 @@ nav {
     align-items: center;
     color: white;
     font-size: 2rem;
+    box-shadow: 0 0 10px var(--Success-Color), 0 0 20px var(--Accent-Color);
 }
 
 nav button {
@@ -101,7 +102,7 @@ nav button:hover {
 
 #todo-input:focus {
     outline: none;
-    border-color: #4a90e2;
+    border-color: #19ed55;
     box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
 }
 
@@ -115,10 +116,13 @@ nav button:hover {
     font-weight: 500;
     cursor: pointer;
     transition: background-color 0.3s;
+    border: 3px solid rgba(0, 0, 0, 0);
 }
 
 .input-section button:hover {
-    background-color: #3a7bc8;
+    background-color: var(--Primary-Color);
+    border: 3px solid var(--Success-Color);
+    color: var(--Secondary-Color);
 }
 
 .list-todo {
