@@ -19,14 +19,6 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Card  */
-#loginForm, #register {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  font-family: "Poku";
-}
-
 input {
   height: 40px; /* contoh */
   padding: 0 1rem; /* padding atas-bawah bisa diatur lebih kecil */
@@ -87,6 +79,14 @@ body {
   font-size: 3rem;
 }
 
+.Content a {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: var(--Secondary-Color);  
+  cursor: pointer;
+}
+
 /* Card */
 #loginForm, #register {
   width: 100%;
@@ -94,6 +94,7 @@ body {
   background-color: var(--Secondary-Color);
   padding: 2rem;
   transition: all 0.3s ease;
+  font-family: "Poku";
 }
 
 .hidden {
