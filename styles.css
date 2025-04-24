@@ -19,6 +19,7 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
 input {
   height: 40px; /* contoh */
   padding: 0 1rem; /* padding atas-bawah bisa diatur lebih kecil */
@@ -60,6 +61,9 @@ body {
   overflow: hidden;
   border-radius: 30px;
   background-color: var(--Secondary-Color);
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+
 }
 
 
@@ -73,12 +77,6 @@ body {
   justify-content: center;
 }
 
-.Content h1 {
-  font-family: "Poku";
-  color: var(--Secondary-Color);
-  font-size: 3rem;
-}
-
 .Content a {
   position: absolute;
   top: 20px;
@@ -87,18 +85,35 @@ body {
   cursor: pointer;
 }
 
+.Content h1 {
+  font-family: "Poku";
+  color: var(--Secondary-Color);
+  font-size: 3rem;
+}
+
+.Form {
+  width: 100%;
+  height: 50%;
+}
+
 /* Card */
 #loginForm, #register {
   width: 100%;
-  height: 50%;
+  height: 100%;
   background-color: var(--Secondary-Color);
   padding: 2rem;
   transition: all 0.3s ease;
-  font-family: "Poku";
+  transform: translateY(0);
 }
+
 
 .hidden {
   display: none;
+}
+
+.slide-up {
+  transform: translateY(-50px);
+  opacity: 0;
 }
 
 /* Header */
