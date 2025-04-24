@@ -18,11 +18,13 @@
   color: var(--Secondary-Color);
 }
 
+
 body {
   width: 100vw;
   height: 100vh;
   background-color: var(--Primary-Color);
   overflow: hidden;
+  position: relative;
 }
 
 nav {

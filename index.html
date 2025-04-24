@@ -7,57 +7,63 @@
     <title>Login dan Registrasi</title>
   </head>
 
-  <body>
+  <body>    
+    <div id="cursor">
+      <h3>Login Ngabss !!!</h3>
+    </div>
 
     <div class="video-bg">
-        <video id="video" src="./Asset/login.mp4" autoplay muted loop></video>
-      </div>
+      <video id="video" src="./Asset/login.mp4" autoplay muted loop></video>
+    </div>
 
     <div class="container">
       <!-- Content-->
       <div class="Content">
-          <h1>Login</h1>
-          <a href="./LandingPage.html"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" height="50px">
+        <h1>Login</h1>
+        <a href="./LandingPage.html"
+          ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" height="50px">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
           </svg>
-          </a>
+        </a>
       </div>
 
       <div class="Form">
-          <!-- Login Form -->
-      <div id="loginForm">
-        <form onsubmit="return handleLogin(event)">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" required />
-          <button type="submit" id="button-login">Login</button>
-          <div class="response"></div>
-        </form>
-        <p>Belum punya akun? <a href="#" onclick="toggleForms('register')">Registrasi di sini</a></p>
-      </div>
+        <!-- Login Form -->
+        <div id="loginForm">
+          <form onsubmit="return handleLogin(event)">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+            <button type="submit" id="button-login">Login</button>
+            <div class="response"></div>
+          </form>
+          <p>Belum punya akun? <a href="#" onclick="toggleForms('register')">Registrasi di sini</a></p>
+        </div>
 
-      <!-- Register Form -->
-      <div id="register" class="hidden">
-        <form onsubmit="return handleRegister(event)">
-          <label for="regFullname">Fullname:</label>
-          <input type="text" id="regFullname" name="regFullname" required />
-          <label for="regEmail">Email:</label>
-          <input type="email" id="regEmail" name="regEmail" required />
-          <label for="regPassword">Password:</label>
-          <input type="password" id="regPassword" name="regPassword" required />
-          <button type="submit" id="btn-regis">Registrasi</button>
-          <p>Sudah punya akun? <a href="#" onclick="toggleForms('login')">Login di sini</a></p>
-        </form>
+        <!-- Register Form -->
+        <div id="register" class="hidden">
+          <form onsubmit="return handleRegister(event)">
+            <label for="regFullname">Fullname:</label>
+            <input type="text" id="regFullname" name="regFullname" required />
+            <label for="regEmail">Email:</label>
+            <input type="email" id="regEmail" name="regEmail" required />
+            <label for="regPassword">Password:</label>
+            <input type="password" id="regPassword" name="regPassword" required />
+            <button type="submit" id="btn-regis">Registrasi</button>
+            <p>Sudah punya akun? <a href="#" onclick="toggleForms('login')">Login di sini</a></p>
+          </form>
+        </div>
       </div>
-      </div>
-      
     </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <script>
-    
+      document.addEventListener("mousemove", function (e) {
+        const cursor = document.getElementById("cursor");
+        cursor.style.top = e.clientY + "px";
+      });
 
       function toggleForms(form) {
         const loginForm = document.getElementById("loginForm");
@@ -68,16 +74,12 @@
 
         //test
         const Form = document.querySelector(".Form");
-        console.log(Form)
-        
-
+        console.log(Form);
 
         if (form === "register") {
-          
           loginForm.classList.add("hidden");
           registerDiv.classList.remove("hidden");
           Judul.innerHTML = "Registrasi";
-  
         } else {
           loginForm.classList.remove("hidden");
           registerDiv.classList.add("hidden");
